@@ -125,11 +125,54 @@
   object-fit: cover;
 }
 
+/* ========== STATUTS AMÉLIORÉS ========== */
+.status-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+.status-button {
+  display: inline-block;
+  padding: 1px 5px;
+  border-radius: 25px;
+  font-weight: bold;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  border: none;
+  cursor: default;
+  text-align: center;
+  min-width: 140px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.status-button:hover {
+  transform: scale(1.07);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ Acceptée → Dégradé Vert */
+.status-accepted {
+  background: linear-gradient(135deg, #7bdaff, #26ff34);
+}
+
+/* 🟠 En attente → Dégradé Orange */
+.status-pending {
+  background: linear-gradient(135deg, #fff830, #F57C00);
+}
+
+/* ❌ Rejetée → Dégradé Rouge */
+.status-rejected {
+  background: linear-gradient(135deg, #fca708, #ff2d2d);
+}
+
 /* Bouton "Voir Détails" */
 .details-btn {
   background: #ff5722;
   color: white;
-  padding: 5px 10px;
+  padding: 2px 10px;
   text-decoration: none;
   border-radius: 5px;
   font-size: 14px;

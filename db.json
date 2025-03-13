@@ -7,15 +7,16 @@
       "phone": "06 12 34 56 78",
       "address": "123 Rue de Paris",
       "city": "Paris",
+      "zip": "75000",
       "country": "France",
       "message": "Bienvenue dans mes expériences ! Je suis ravi de vous faire découvrir des endroits uniques avec passion et enthousiasme.",
-      "status": "Actif",
+      "status": "Accepté",
       "registration_date": "2024-01-15",
       "last_login": "2024-02-20",
       "documents": [
         {
           "id": 1,
-          "type": "Pièce Identité",
+          "type": "Pièce Identité recto",
           "url": "https://placehold.co/200"
         },
         {

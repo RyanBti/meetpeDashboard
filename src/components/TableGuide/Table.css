@@ -1,0 +1,56 @@
+.table-container {
+  padding: 20px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.custom-table th, .custom-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.custom-table thead {
+  background: #00ADB5;
+  color: white;
+}
+
+.custom-table tbody tr:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.btn-view, .btn-edit {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.btn-view {
+  background: #00ADB5;
+  color: white;
+}
+
+.btn-edit {
+  background: #FF5722;
+  color: white;
+}
+
+.btn-view:hover, .btn-edit:hover {
+  opacity: 0.8;
+}

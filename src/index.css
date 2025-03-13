@@ -1,0 +1,67 @@
+/* Global styles */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Dégradé léger pour le fond global */
+  --background-gradient: linear-gradient(135deg, #f8f9fa, #f2f2f2); /* Dégradé doux */
+  --primary-color: #FB6240; /* Orange Meetpe */
+  --secondary-color: #5391f7; /* Bleu clair */
+}
+
+/* Body styles */
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--background-gradient); /* Dégradé global de fond */
+  background-attachment: fixed;
+}
+
+
+p{
+  color: #333;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 12px 18px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: var(--primary-color); /* Orange Meetpe pour les en-têtes */
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9; /* Légèrement plus clair pour les lignes paires */
+}
+
+table tr:nth-child(odd) {
+  background-color: #f1f1f1; /* Légèrement plus sombre pour les lignes impaires */
+}
+
+tr:hover {
+  background-color: #ff8d41; /* Orange doux au survol */
+}
+
+td {
+  color: #333;
+  font-size: 16px;
+}

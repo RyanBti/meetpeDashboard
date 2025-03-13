@@ -1,0 +1,92 @@
+/* Conteneur principal du Dashboard */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: calc(100% - 250px); /* Pour laisser de l'espace à la sidebar */
+  margin-left: 250px;
+  padding: 20px;
+}
+
+/* Titre */
+.dashboard-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Zone du tableau */
+.dashboard-table-container {
+  width: 100%;
+  max-width: 900px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Recherche */
+.search-bar {
+  width: 100%;
+  background: #333;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Tableau */
+.table-container {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th, .table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.table th {
+  background: #ff5a00;
+  color: white;
+}
+
+/* Boutons */
+.table-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.button-view {
+  background: #0097A7;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-edit {
+  background: #ff5722;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.button-view:hover {
+  background: #007c91;
+}
+
+.button-edit:hover {
+  background: #e64a19;
+}

@@ -5,21 +5,45 @@ import "./GuideDetails.css";
 const GuideDetails = () => {
   const { id } = useParams();
   const [guide, setGuide] = useState(null);
+  const [experiences, setExperiences] = useState([]);
 
   useEffect(() => {
+    // Charger les détails du guide
     fetch(`http://localhost:5000/guides/${id}`)
-      .then((response) => response.json())
-      .then((data) => setGuide(data))
-      .catch((error) => console.error("Erreur lors du chargement du guide :", error));
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Erreur API Guide: 404");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("📌 Guide récupéré :", data);
+        setGuide(data);
+      })
+      .catch((error) => console.error("❌ Erreur lors du chargement du guide :", error));
+
+    // Charger les expériences liées au guide
+    fetch(`http://localhost:5000/experiences?guideId=${id}`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Erreur API Expériences: 404");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("🔍 Expériences récupérées :", data);
+        setExperiences(data);
+      })
+      .catch((error) => console.error("❌ Erreur lors du chargement des expériences :", error));
   }, [id]);
 
-  if (!guide) return <p>Chargement des détails...</p>;
+  if (!guide) return <p className="loading-message">Chargement des détails...</p>;
 
   return (
     <div className="guide-details-container">
-      <h2 className="guide-title">Détails du Guide</h2>
+      <h2 className="title">Détails du Guide</h2>
 
-      {/* Grille d'informations */}
+      {/* Grille d'infos principales */}
       <div className="info-grid">
         <div className="info-card">
           <h3>Informations Personnelles</h3>
@@ -44,48 +68,43 @@ const GuideDetails = () => {
         </div>
       </div>
 
-      {/* Section des documents */}
-      <div className="documents-section">
-        <h3>Documents d'Identité</h3>
-        <div className="document-list">
-          {guide.documents?.map((doc) => (
-            <div key={doc.id} className="document-card">
-              <p>{doc.type}</p>
-              <img src={doc.url} alt={doc.type} width="100%" />
-            </div>
-          ))}
-        </div>
-      </div>
-
       {/* Expériences Proposées */}
       <div className="experiences-section">
         <h3>Expériences Proposées</h3>
         <table className="experiences-table">
           <thead>
             <tr>
+              <th>Titre</th>
               <th>Description</th>
               <th>Durée</th>
               <th>Prix</th>
               <th>Statut</th>
-              <th>Action</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>
-            {guide.experiences?.map((experience) => (
-              <tr key={experience.id}>
-                <td>{experience.description}</td>
-                <td>{experience.duration}</td>
-                <td>{experience.price}</td>
-                <td className={experience.status === "Acceptée" ? "status-accepted" : "status-rejected"}>
-                  {experience.status}
-                </td>
-                <td>
-                  <Link to={`/experience/${experience.id}`} className="details-btn">
-                    Voir Détails
-                  </Link>
-                </td>
+            {experiences.length > 0 ? (
+              experiences.map((experience) => (
+                <tr key={experience.id}>
+                  <td>{experience.title}</td>
+                  <td>{experience.description}</td>
+                  <td>{experience.duration}</td>
+                  <td>{experience.price}</td>
+                  <td className={`status-${experience.status.toLowerCase()}`}>
+                    {experience.status}
+                  </td>
+                  <td>
+                    <Link to={`/experience/${experience.id}`} className="details-btn">
+                      Voir Détails
+                    </Link>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="6" className="no-experience">Aucune expérience disponible</td>
               </tr>
-            ))}
+            )}
           </tbody>
         </table>
       </div>

@@ -17,7 +17,7 @@
       "last_login": "2024-02-20",
       "documents": [
         {
-          "id": 1,
+          "id": "1",
           "type": "Pièce Identité",
           "url": "https://via.placeholder.com/180"
         }
@@ -27,7 +27,7 @@
   "experiences": [
     {
       "id": "1",
-      "guideId": 1,
+      "guideId": "1",
       "title": "Visite gastronomique de Paris",
       "description": "Dégustez les meilleurs plats traditionnels parisiens avec un guide expert.",
       "price": "50€",
@@ -40,7 +40,7 @@
     },
     {
       "id": "2",
-      "guideId": 1,
+      "guideId": "1",
       "title": "Tour en montgolfière",
       "description": "Admirez la ville vue du ciel avec une expérience unique en montgolfière.",
       "price": "120€",
@@ -53,7 +53,7 @@
     },
     {
       "id": "3",
-      "guideId": 1,
+      "guideId": "1",
       "title": "Randonnée en forêt",
       "description": "Explorez des sentiers magnifiques et découvrez la nature.",
       "price": "30€",

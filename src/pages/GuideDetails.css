@@ -1,12 +1,15 @@
 /* ========== CONTENEUR PRINCIPAL ========== */
 .guide-details-container {
-  max-width: 1400px;
-  margin: 40px auto;
+  max-width: 1200px;
+  margin: auto;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   transition: margin-left 0.3s ease-in-out;
+  margin-left: 250px; /* Décale tout à droite pour laisser l'espace à la sidebar */
+}
+
+/* Lorsque la sidebar est réduite */
+.sidebar-collapsed .guide-details-container {
+  margin-left: 100px; /* Ajustement lorsqu'elle est réduite */
 }
 
 /* ========== TITRE ========== */
@@ -100,15 +103,19 @@
   font-weight: bold;
 }
 
+h2, h3{
+  color:#ff5722
+}
+
 /* ========== RESPONSIVE DESIGN ========== */
 @media screen and (max-width: 1024px) {
-  .info-grid {
-      grid-template-columns: repeat(2, 1fr);
+  .guide-details-container {
+    margin-left: 150px; /* Ajuste en fonction de la largeur de l'écran */
   }
 }
 
 @media screen and (max-width: 768px) {
-  .info-grid {
-      grid-template-columns: 1fr;
+  .guide-details-container {
+    margin-left: 80px; /* Ajuste encore plus la marge pour les petits écrans */
   }
 }

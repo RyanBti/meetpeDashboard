@@ -4,12 +4,12 @@
   margin: auto;
   padding: 20px;
   transition: margin-left 0.3s ease-in-out;
-  margin-left: 250px; /* Décale tout à droite pour laisser l'espace à la sidebar */
+  margin-left: 350px; /* Réduit le décalage pour mieux centrer */
 }
 
 /* Lorsque la sidebar est réduite */
 .sidebar-collapsed .guide-details-container {
-  margin-left: 100px; /* Ajustement lorsqu'elle est réduite */
+  margin-left: 100px; /* Ajustement pour sidebar réduite */
 }
 
 /* ========== TITRE ========== */
@@ -28,6 +28,7 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   width: 100%;
+  justify-content: center; /* Centre la grille */
 }
 
 /* Cartes d'information */
@@ -61,11 +62,12 @@
   text-align: center;
 }
 
-.document-list {
+.documents-container {
   display: flex;
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+  margin-bottom: 20px;
 }
 
 .document-card {
@@ -74,7 +76,13 @@
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
-  max-width: 200px;
+  width: 180px;
+}
+
+.document-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
 }
 
 /* ========== EXPÉRIENCES ========== */
@@ -84,6 +92,7 @@
   text-align: center;
 }
 
+/* Tableau des expériences */
 .experiences-table {
   width: 100%;
   border-collapse: collapse;
@@ -103,19 +112,56 @@
   font-weight: bold;
 }
 
-h2, h3{
-  color:#ff5722
+/* Images des expériences */
+.experience-images {
+  display: flex;
+  gap: 10px;
 }
 
+.experience-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  object-fit: cover;
+}
+
+/* Bouton "Voir Détails" */
+.details-btn {
+  background: #ff5722;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.details-btn:hover {
+  background: #e64a19;
+}
+h3,h2{
+  color:#ff5722
+}
 /* ========== RESPONSIVE DESIGN ========== */
+@media screen and (min-width: 1600px) {
+  .guide-details-container {
+    margin-left: 450px; /* Décale un peu plus pour les très grands écrans */
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .guide-details-container {
-    margin-left: 150px; /* Ajuste en fonction de la largeur de l'écran */
+    margin-left: 150px;
+  }
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media screen and (max-width: 768px) {
   .guide-details-container {
-    margin-left: 80px; /* Ajuste encore plus la marge pour les petits écrans */
+    margin-left: 80px;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
   }
 }

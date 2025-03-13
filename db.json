@@ -8,18 +8,45 @@
       "address": "123 Rue de Paris",
       "city": "Paris",
       "country": "France",
-      "zip": "75001",
-      "iban": "FR7630004000031234567890143",
-      "bic": "BNPAFRPPXXX",
-      "accountHolder": "John Doe",
+      "message": "Bienvenue dans mes expériences ! Je suis ravi de vous faire découvrir des endroits uniques avec passion et enthousiasme.",
       "status": "Actif",
       "registration_date": "2024-01-15",
       "last_login": "2024-02-20",
       "documents": [
         {
-          "id": "1",
+          "id": 1,
           "type": "Pièce Identité",
-          "url": "https://via.placeholder.com/180"
+          "url": "https://placehold.co/200"
+        },
+        {
+          "id": 2,
+          "type": "Pièce Identité verso",
+          "url": "https://placehold.co/200"
+        },
+        {
+          "id": 3,
+          "type": "Kbis",
+          "url": "https://placehold.co/200"
+        },
+        {
+          "id": 4,
+          "type": "Permis",
+          "url": "https://placehold.co/200"
+        },
+        {
+          "id": 5,
+          "type": "Licence professionnelle",
+          "url": "https://placehold.co/200"
+        },
+        {
+          "id": 6,
+          "type": "Assurance",
+          "url": "https://placehold.co/200"
+        },
+        {
+          "id": 7,
+          "type": "Autres",
+          "url": "https://placehold.co/200"
         }
       ]
     }
@@ -27,41 +54,41 @@
   "experiences": [
     {
       "id": "1",
-      "guideId": "1",
+      "guideId": 1,
       "title": "Visite gastronomique de Paris",
       "description": "Dégustez les meilleurs plats traditionnels parisiens avec un guide expert.",
       "price": "50€",
       "duration": "3h",
       "status": "Acceptée",
       "images": [
-        "https://via.placeholder.com/250",
-        "https://via.placeholder.com/250"
+        "https://placehold.co/150",
+        "https://placehold.co/150"
       ]
     },
     {
       "id": "2",
-      "guideId": "1",
+      "guideId": 1,
       "title": "Tour en montgolfière",
       "description": "Admirez la ville vue du ciel avec une expérience unique en montgolfière.",
       "price": "120€",
       "duration": "2h",
       "status": "En attente",
       "images": [
-        "https://via.placeholder.com/250",
-        "https://via.placeholder.com/250"
+        "https://placehold.co/150",
+        "https://placehold.co/150"
       ]
     },
     {
       "id": "3",
-      "guideId": "1",
+      "guideId": 1,
       "title": "Randonnée en forêt",
       "description": "Explorez des sentiers magnifiques et découvrez la nature.",
       "price": "30€",
       "duration": "5h",
       "status": "Rejetée",
       "images": [
-        "https://via.placeholder.com/250",
-        "https://via.placeholder.com/250"
+        "https://placehold.co/150",
+        "https://placehold.co/150"
       ]
     }
   ]
